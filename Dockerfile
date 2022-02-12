@@ -7,7 +7,7 @@ FROM python:3.10-slim
 WORKDIR /app
 
 COPY --from=builder /root/.local /root/.local
-COPY ./src .
+COPY ./main.py .
 
 ENV PATH=/root/.local:$PATH
 EXPOSE 9091
