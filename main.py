@@ -78,7 +78,7 @@ def count_threads(url):
 
 # Запустить процесс для каждого доменного имени, которое необходимо отслеживать
 if __name__ == '__main__':
-    logging.info('Start app')
+    logging.info('Start agent')
 
     start_http_server(9091)
     logging.info('Start HTTP server')
@@ -102,4 +102,4 @@ if __name__ == '__main__':
 
     logging.info('Stop HTTP server')
     thread.join()
-    logging.info('Stop app')
+    logging.info('Stop agent')
