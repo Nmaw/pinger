@@ -21,6 +21,7 @@ logging.basicConfig(format=FMT, level=logging.DEBUG)
 
 #curl url, код статуса возврата и общее время
 def test_website(url):
+    logging.info(f'Test url: {url}')
     buffer_curl = BytesIO()
     c = pycurl.Curl()
     c.setopt(c.URL, url)
@@ -32,9 +33,11 @@ def test_website(url):
     except pycurl.error:
         http_code = 500
         http_total_time = 999
+        logging.error('PyCurl issue')
     else:
         http_code = c.getinfo(pycurl.HTTP_CODE)
         http_total_time = c.getinfo(pycurl.TOTAL_TIME)
+
     return http_code, http_total_time
 
 
@@ -51,6 +54,7 @@ def count_metric(url):
         url_http_code.labels('4xx',url).inc()
     else:
         url_http_code.labels('5xx',url).inc()
+
     if http_total_time < 1 :
         url_http_request_time.labels('1',url).inc()
     elif http_total_time < 2 :
@@ -59,6 +63,7 @@ def count_metric(url):
         url_http_request_time.labels('3',url).inc()
     else :
         url_http_request_time.labels('+Inf',url).inc()
+
     http_request_total.labels(url).inc()
 
 
@@ -73,7 +78,11 @@ def count_threads(url):
 
 # Запустить процесс для каждого доменного имени, которое необходимо отслеживать
 if __name__ == '__main__':
+    logging.info('Start app')
+
     start_http_server(9091)
+    logging.info('Start HTTP server')
+
     server_list = [
             'www.baidu.com',
             'www.qq.com',
@@ -82,10 +91,15 @@ if __name__ == '__main__':
             'google.com'
             ]
     threads = []
+
     for url in server_list:
         t = threading.Thread(target=count_threads,args=(url,))
         threads.append(t)
+
     for thread in threads:
         thread.setDaemon(True)
         thread.start()
+
+    logging.info('Stop HTTP server')
     thread.join()
+    logging.info('Stop app')

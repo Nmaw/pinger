@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e" pages="7">
     <diagram id="SRy2Wd7eS6ofBbnWyENE" name="Architecture">
-        <mxGraphModel dx="653" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="838" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -198,7 +198,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="zvGQHIP7IfQCgYhLQbB0" name="Module|API Server">
-        <mxGraphModel dx="653" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="838" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="eo2EnIdeZHMJ2gKf3YH1-0"/>
                 <mxCell id="eo2EnIdeZHMJ2gKf3YH1-1" parent="eo2EnIdeZHMJ2gKf3YH1-0"/>
@@ -398,7 +398,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="6DS0IxbfFm9UPeE94HJj" name="Module|Scheduler">
-        <mxGraphModel dx="868" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="838" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="HZcYQYkoJH3neFrLHVz--0"/>
                 <mxCell id="HZcYQYkoJH3neFrLHVz--1" parent="HZcYQYkoJH3neFrLHVz--0"/>
@@ -545,7 +545,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="hd9w3-vgXE60JzlHBmsr" name="Module|Agent">
-        <mxGraphModel dx="868" dy="563" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="838" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="pM1X5RBkX2XA5scC7ftx-0"/>
                 <mxCell id="pM1X5RBkX2XA5scC7ftx-1" parent="pM1X5RBkX2XA5scC7ftx-0"/>

@@ -10,5 +10,6 @@ COPY --from=builder /root/.local /root/.local
 COPY ./src .
 
 ENV PATH=/root/.local:$PATH
+EXPOSE 9091
 
 CMD ["python", "-u", "./main.py"]
