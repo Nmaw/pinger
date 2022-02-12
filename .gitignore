@@ -1,0 +1,12 @@
+# folders
+/tmp
+
+
+# files
+*.log
+*.db
+*.cfg
+*.yml
+*.ini
+*.tmp
+*env
