@@ -1,4 +1,4 @@
-core:
+core: # all settings for work with core 
   mq:
     enable: false
     type: NATS # Kafka/NATS/KeyDB/RabbitMQ or etc
@@ -7,10 +7,11 @@ core:
     ssl: 
       type: pem # pem or etc
       path: certs.pem
-local: # all for work with local env
+
+local: # all settings for work with local env
   db: 
     enable: true
-    type: redis # Redis/KeyDB/SQLite or etc
+    type: redis # Redis(KeyDB)/SQLite or etc
     host: 127.0.0.1
     port: 6379 # Redis or KeyDB
     user: admin
@@ -19,14 +20,26 @@ local: # all for work with local env
   metrics:
     enable: true
     host: 127.0.0.1
-    port: 9009
+    port: 9091
     auth:
       admin: adminadmin
   
-  cfg:
-    include: "*.yaml"
-    exclude: "main.yaml"
+  tasks:
     reload:
-      enable: true
       period: 1m # from 5 sec to 1 hour
-
+    files:
+      path: "./cfg" # if none => unused option
+      includes: 
+      - "*.yaml"
+      - "*.yml"
+      excludes: 
+      - "main.yaml"
+      - "main.yml"
+    repo:
+      type: none # GitHub/GitLab/Git/HTTP or etc if none => unused option
+      host: 127.0.0.1
+      port: 9009
+      auth:
+        type: basic # Basic/pem
+        admin: adminadmin
+      
