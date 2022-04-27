@@ -1,0 +1,32 @@
+core:
+  mq:
+    enable: false
+    type: NATS # Kafka/NATS/KeyDB/RabbitMQ or etc
+    user: admin
+    password: adminadmin
+    ssl: 
+      type: pem # pem or etc
+      path: certs.pem
+local: # all for work with local env
+  db: 
+    enable: true
+    type: redis # Redis/KeyDB/SQLite or etc
+    host: 127.0.0.1
+    port: 6379 # Redis or KeyDB
+    user: admin
+    password: adminadmin
+
+  metrics:
+    enable: true
+    host: 127.0.0.1
+    port: 9009
+    auth:
+      admin: adminadmin
+  
+  cfg:
+    include: "*.yaml"
+    exclude: "main.yaml"
+    reload:
+      enable: true
+      period: 1m # from 5 sec to 1 hour
+
