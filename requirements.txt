@@ -1,2 +1,4 @@
 pycurl
 prometheus_client
+json
+requests
